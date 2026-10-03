@@ -2,6 +2,7 @@ services:
   - type: web
     name: campuslink-ml-demo
     runtime: node
+    plan: free
     buildCommand: npm ci --include=dev && npm run build
     startCommand: npm start
     healthCheckPath: /health
