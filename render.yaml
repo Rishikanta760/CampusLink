@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: campuslink-ml-demo
+    runtime: node
+    buildCommand: npm ci --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: CAMPUSLINK_MODEL_DIR
+        value: models-demo
+      - key: CAMPUSLINK_ALLOW_UNVERIFIED_DEMO
+        value: "true"
+      - key: CAMPUSLINK_ML_DEV_TOKEN
+        generateValue: true

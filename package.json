@@ -1,0 +1,22 @@
+{
+  "name": "campuslink-ml-service",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "train:placement": "node scripts/run-tsx.cjs scripts/train-placement.ts",
+    "train:placement:demo": "node scripts/run-tsx.cjs scripts/train-demo-placement.ts",
+    "dev": "node scripts/run-tsx.cjs watch server/dev-server.ts",
+    "build": "tsc",
+    "start": "node dist/server/dev-server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.3",
+    "@types/node": "22.18.0",
+    "tsx": "4.20.6",
+    "typescript": "5.9.2"
+  }
+}

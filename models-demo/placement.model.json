@@ -1,0 +1,59 @@
+{
+  "version": "campuslink-logistic-demo-v1-643749628616",
+  "provenance": "unverified_demo",
+  "trainedAt": "2026-10-02T18:44:07.839Z",
+  "featureOrder": [
+    "verifiedSkills",
+    "academics",
+    "projects",
+    "aptitude",
+    "communication",
+    "interview"
+  ],
+  "weights": [
+    -1.8104709355242965,
+    0.4153736073598461,
+    0.4842278142746362,
+    0.023090202417092094,
+    -0.21812568861049159,
+    -0.597719764940973,
+    2.019949163749652
+  ],
+  "preprocessingFile": "placement.preprocessing.json",
+  "split": {
+    "strategy": "latest-cohort-with-student-group-isolation",
+    "trainingCohorts": [
+      "2024-25",
+      "2025-26"
+    ],
+    "testCohorts": [
+      "2026-27"
+    ],
+    "trainingStudentCount": 284,
+    "testStudentCount": 134,
+    "purgedRowsForGroupIsolation": 0
+  },
+  "evaluation": {
+    "model": {
+      "accuracy": 0.6865671641791045,
+      "precision": 0.8571428571428571,
+      "recall": 0.1276595744680851,
+      "f1": 0.2222222222222222,
+      "brier": 0.20828000768329277,
+      "testCount": 134,
+      "positiveCount": 47,
+      "negativeCount": 87
+    },
+    "majorityBaseline": {
+      "accuracy": 0.6492537313432836,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "brier": 0.22780790799030015,
+      "testCount": 134,
+      "positiveCount": 47,
+      "negativeCount": 87
+    },
+    "trainingCount": 284
+  }
+}

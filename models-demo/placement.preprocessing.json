@@ -1,0 +1,13 @@
+{
+  "version": "score-normalization-v1",
+  "featureOrder": [
+    "verifiedSkills",
+    "academics",
+    "projects",
+    "aptitude",
+    "communication",
+    "interview"
+  ],
+  "transform": "divide each 0-100 evidence score by 100",
+  "missingValues": "rejected"
+}
