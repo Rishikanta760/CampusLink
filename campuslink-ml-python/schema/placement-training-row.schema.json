@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CampusLink placement training row",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["studentId", "cohort", "evidenceAt", "outcomeAt", "outcomeSource", "verifiedSkills", "academics", "projects", "aptitude", "communication", "interview", "placed"],
+  "properties": {
+    "studentId": {"type": "string", "minLength": 1},
+    "cohort": {"type": "string", "minLength": 1},
+    "evidenceAt": {"type": "string", "format": "date-time"},
+    "outcomeAt": {"type": "string", "format": "date-time"},
+    "outcomeSource": {"enum": ["observed", "unverified_demo"]},
+    "verifiedSkills": {"type": "number", "minimum": 0, "maximum": 100},
+    "academics": {"type": "number", "minimum": 0, "maximum": 100},
+    "projects": {"type": "number", "minimum": 0, "maximum": 100},
+    "aptitude": {"type": "number", "minimum": 0, "maximum": 100},
+    "communication": {"type": "number", "minimum": 0, "maximum": 100},
+    "interview": {"type": "number", "minimum": 0, "maximum": 100},
+    "placed": {"type": "integer", "enum": [0, 1]}
+  }
+}

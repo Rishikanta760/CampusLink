@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: campuslink-ml-python-demo
+    runtime: python
+    plan: free
+    buildCommand: python -m pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: CAMPUSLINK_MODEL_DIR
+        value: models-demo
+      - key: CAMPUSLINK_ALLOW_UNVERIFIED_DEMO
+        value: "true"
+      - key: CAMPUSLINK_ML_DEV_TOKEN
+        generateValue: true
